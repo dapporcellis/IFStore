@@ -38,4 +38,8 @@ app.post('/login', (req, res)=>{
     res.redirect('/admin/usuarios/lst')
 })
 
+app.get("/admin/usuarios/lst", (req, res)=>{
+    res.render('admin/usuarios/lst')
+})
+
 app.listen(port);
