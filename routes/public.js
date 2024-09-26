@@ -1,7 +1,7 @@
 import express from 'express';
 const router = express.Router();
 
-import { abrecadastro, cadastro, abrelogin, login } from '../controllers/public';
+import { abrecadastro, cadastro, abrelogin, login } from '../controllers/public.js';
 
 router.get('/cadastro', abrecadastro)
 

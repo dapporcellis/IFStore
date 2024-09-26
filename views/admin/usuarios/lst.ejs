@@ -62,31 +62,28 @@
                     <table class="table table-striped table-hover table-dark">
                         <thead>
                             <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Primeiro</th>
-                                <th scope="col">Último</th>
-                                <th scope="col">Nickname</th>
+                                <th scope="col">Id</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Foto</th>
+                                <th scope="col">Detalhe</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
+                            <%usuarios.forEach(function(usuario){%>
+
+                                <tr>
+                                    <th scope="row"> <%=usuario._id%> </th>
+                                    <td> <%=usuario.nome%> </td>
+                                    <td> <%=usuario.email%> </td>
+                                    <td> <%=usuario.foto%> </td>
+                                    <td>
+                                        <a href="/admin/usuarios/detalhe/<%=usuario._id%>">Detalhe</a>
+                                    </td>
+                                </tr>
+
+                            <%})%>                           
+                            
                         </tbody>
                     </table>
                 </div>
