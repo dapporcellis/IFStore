@@ -22,3 +22,13 @@ export async function addcategoria(req, res) {
     })
     res.redirect('/admin/categoria/add')
 }
+
+export async function listarcategoria(req, res) {
+    const categorias = await Categoria.find({})
+    res.render('admin/categoria/lst',{Categorias: categorias});
+}
+
+export async function filtrarcategoria(req, res) {
+    const categorias = await Categoria.find({nome: req.body.pesquisar})
+    res.render('admin/categoria/lst',{Categorias: categorias});
+}

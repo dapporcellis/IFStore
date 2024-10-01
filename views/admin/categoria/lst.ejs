@@ -8,21 +8,21 @@
                     <tr>
                         <th scope="col">Id</th>
                         <th scope="col">Nome</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Foto</th>
-                        <th scope="col">Detalhe</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Deletar</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <%usuarios.forEach(function(usuario){%>
+                    <%Categorias.forEach(function(categoria){%>
 
                     <tr>
-                        <th scope="row"> <%=usuario._id%> </th>
-                        <td> <%=usuario.nome%> </td>
-                        <td> <%=usuario.email%> </td>
-                        <td> <%=usuario.foto%> </td>
+                        <th scope="row"> <%=categoria._id%> </th>
+                        <td> <%=categoria.nome%> </td>
                         <td>
-                            <a href="/admin/usuarios/detalhe/<%=usuario._id%>">Detalhe</a>
+                            <a href="/admin/categoria/editar/<%=categoria._id%>">Editar</a>
+                        </td>
+                        <td>
+                            <a href="/admin/categoria/deletar/<%=categoria._id%>">Deletar</a>
                         </td>
                     </tr>
 
