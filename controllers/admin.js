@@ -2,7 +2,6 @@ import Usuario from '../models/usuario.js';
 import Categoria from '../models/categoria.js';
 
 export async function listarusuarios(req, res){
-    console.log("AQUI"+req.params)
     const usuarios = await Usuario.find({}).catch(function(err){console.log(err)});
     res.render('admin/usuarios/lst', {usuarios: usuarios});
 }
@@ -37,3 +36,14 @@ export async function deletacategoria(req, res) {
     await Categoria.findByIdAndDelete(req.params.id)
     res.redirect('/admin/categoria/lst')
 }
+
+export async function abreedtcategoria(req, res){
+    const categoria = await Categoria.findById(req.params.id)
+    res.render('admin/categoria/edt.ejs',{Categoria: categoria})
+}
+
+export async function edtcategoria(req, res){
+    await Categoria.findByIdAndUpdate(req.params.id, req.body)
+    res.redirect('/admin/categoria/lst')
+}
+
