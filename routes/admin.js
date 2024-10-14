@@ -12,7 +12,7 @@ import {
         listarcategoria, 
         filtrarcategoria,
         abreaddproduto,
-        addcproduto,
+        addproduto,
         listarproduto,
         filtrarproduto,
         deletaproduto,
@@ -40,10 +40,10 @@ router.post('/admin/categoria/edt/:id', edtcategoria)
 
 //create do modelo produto (create)
 router.get('/admin/produto/add', abreaddproduto)
-router.post('/admin/produto/add', addcproduto)
+router.post('/admin/produto/add', addproduto)
 
 //rotas do modelo produto (read)
-router.get('/admin/categoria/lst', listarproduto)
+router.get('/admin/produto/lst', listarproduto)
 router.post('/admin/produto/lst', filtrarproduto)
 
 //rota do modelo produto (delete)
