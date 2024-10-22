@@ -13,7 +13,7 @@ export async function cadastro(req, res){
         email: req.body.email,
         senha: req.body.senha,
         endereco: req.body.endereco,
-        foto: req.body.foto,
+        foto: req.file.filename,
         telefone: req.body.telefone,
         cpf: req.body.cpf,
         admin: admin

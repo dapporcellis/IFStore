@@ -20,8 +20,10 @@
                         <th scope="row"> <%=usuario._id%> </th>
                         <td> <%=usuario.nome%> </td>
                         <td> <%=usuario.email%> </td>
-                        <td> <%=usuario.foto%> </td>
-                        <td>
+                        <td> 
+                            <img src="/usuarios/<%=usuario.foto%>" max-height="40px" alt="Foto do Usuário">
+                        </td>
+                        <td>-
                             <a href="/admin/usuarios/detalhe/<%=usuario._id%>">Detalhe</a>
                         </td>
                     </tr>
