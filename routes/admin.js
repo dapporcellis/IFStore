@@ -1,7 +1,7 @@
 import express from 'express'
 const router = express.Router()
 import multer from 'multer';
-const upload = multer({ dest: 'public/' })
+const upload = multer({ dest: 'public/fotos/' })
 
 import {    
         abreedtcategoria, 
