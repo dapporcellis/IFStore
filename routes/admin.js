@@ -1,5 +1,7 @@
 import express from 'express'
 const router = express.Router()
+import multer from 'multer';
+const upload = multer({ dest: 'public/' })
 
 import {    
         abreedtcategoria, 
@@ -40,7 +42,7 @@ router.post('/admin/categoria/edt/:id', edtcategoria)
 
 //create do modelo produto (create)
 router.get('/admin/produto/add', abreaddproduto)
-router.post('/admin/produto/add', addproduto)
+router.post('/admin/produto/add', upload.array('fotos',5), addproduto)
 
 //rotas do modelo produto (read)
 router.get('/admin/produto/lst', listarproduto)

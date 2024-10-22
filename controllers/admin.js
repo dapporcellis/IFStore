@@ -53,12 +53,17 @@ export async function abreaddproduto(req, res) {
 }
 
 export async function addproduto(req, res) {
+    console.log(req.files)
+    let fotos = [];
+    for (var i = 0; i < req.files.length; i++) {
+        fotos[i] = req.files[i].filename;
+    }
     await Produto.create({
         nome:req.body.nome,
         valor: req.body.valor,
         categoria: req.body.categoria,
         quantidade: req.body.quantidade,
-        fotos: req.body.fotos,
+        fotos: fotos,
     })
     res.redirect('/admin/produto/add')
 }

@@ -3,7 +3,7 @@
     <div class="card my-4">
         <h5 class="card-header">Adiciona Produto</h5>
         <div class="card-body">
-            <form method="post">
+            <form method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="nome" class="form-label">Nome</label>
                     <input type="text" name="nome" required id="nome" class="form-control">
@@ -22,7 +22,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="fotos" class="form-label">Fotos</label>
-                    <input type="file" multiple name="fotos" required id="fotos" class="form-control">
+                    <input type="file" accept="image/png, image/jpeg" multiple name="fotos" required id="fotos" class="form-control">
                 </div>
                 <div class="mb-3">
                     <input type="submit" value="Adicionar" class="form-control">
