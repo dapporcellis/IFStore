@@ -1,8 +1,13 @@
+//importação da biblioteca express
 import express from 'express'
+//criação de um arquivo de rotas
 const router = express.Router()
+//importação da biblioteca multer para baixar arquivos
 import multer from 'multer';
+//configuração da pasta onde serão inseridos os arquivos baixados
 const upload = multer({ dest: 'public/fotos/' })
 
+//importação das funções de controllers
 import {    
         abreedtcategoria, 
         edtcategoria, 
@@ -22,6 +27,8 @@ import {
         edtproduto
     } from '../controllers/admin.js';
 
+
+//configuração de rotas que apontam para controllers que serão executados
 router.get("/admin/usuarios/lst", listarusuarios)
 router.get("/admin/usuarios/detalhe/:id", detalhe)
 
@@ -54,4 +61,6 @@ router.get('/admin/produto/del/:id', deletaproduto)
 //rota do modelo produto (editar)
 router.get('/admin/produto/edt/:id', abreedtproduto)
 router.post('/admin/produto/edt/:id', edtproduto)
+
+
 export default router
