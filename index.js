@@ -3,7 +3,7 @@ import express from 'express';
 //inicializa a aplicação usando a bibliotea express
 const app = express();
 //cria uma variável com o número da porta
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 //configura o node para usar ejs como view (visão)
 app.set('view engine', 'ejs');
