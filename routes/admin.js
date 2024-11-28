@@ -4,7 +4,7 @@ import express from 'express'
 const router = express.Router()
 //importação da biblioteca multer para baixar arquivos
 //configuração da pasta onde serão inseridos os arquivos baixados
-import { upload } from "../config/multer.js";
+import upload from "../config/multer.js";
 
 //importação das funções de controllers
 import {    
