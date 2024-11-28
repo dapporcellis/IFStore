@@ -3,9 +3,8 @@ import express from 'express'
 //criação de um arquivo de rotas
 const router = express.Router()
 //importação da biblioteca multer para baixar arquivos
-import multer from 'multer';
 //configuração da pasta onde serão inseridos os arquivos baixados
-const upload = multer({ dest: 'public/fotos/' })
+import { upload } from "../config/multer.js";
 
 //importação das funções de controllers
 import {    

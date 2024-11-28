@@ -1,7 +1,7 @@
 import express from 'express';
 const router = express.Router();
 import multer from 'multer';
-const upload = multer({ dest: 'public/usuarios/' })
+import { upload } from "../config/multer.js";
 
 import { abrecadastro, cadastro, abrelogin, login, abreindex } from '../controllers/public.js';
 
