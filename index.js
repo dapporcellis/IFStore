@@ -14,6 +14,13 @@ app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "public"));
 
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+// Converte o caminho do arquivo atual
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 //importa os arquivos de rotas (os endereços são cadastrados neles)
 import publicroutes from './routes/public.js';
 import adminroutes from './routes/admin.js';
