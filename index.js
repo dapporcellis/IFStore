@@ -10,7 +10,9 @@ app.set('view engine', 'ejs');
 //configura o node para receber dados dos formulários
 app.use(express.urlencoded({ extended: true }));
 //configura a pasta de arquivos estáticos (fotos, vídeos ...)
-app.use(express.static('public'));
+app.set("views", __dirname + "/views");
+app.set("view engine", "ejs");
+app.use(express.static(__dirname + "public"));
 
 //importa os arquivos de rotas (os endereços são cadastrados neles)
 import publicroutes from './routes/public.js';
